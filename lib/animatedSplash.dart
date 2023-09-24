@@ -38,9 +38,9 @@ class SplashScreen extends StatelessWidget {
           ),
         ),
       ),
-      nextScreen: const MemoryCardGame(),
+      nextScreen: const start(),
       splashTransition: SplashTransition.fadeTransition,
-      duration: 30000,
+      duration: 3000,
       backgroundColor: Colors.white,
     );
   }
