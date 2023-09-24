@@ -27,7 +27,7 @@ class SplashScreen extends StatelessWidget {
               ),
               // SizedBox(height: 20),
               Text(
-                'Splash Screen testing',
+                'MemoryCard Game',
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: 20,
