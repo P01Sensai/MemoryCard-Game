@@ -10,8 +10,9 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return AnimatedSplashScreen(
-      splash: const Center(
+      splash:  const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -25,7 +26,7 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            // SizedBox(height: 20),
             Text(
               'Splash Screen testing',
               overflow: TextOverflow.ellipsis,
@@ -39,10 +40,8 @@ class SplashScreen extends StatelessWidget {
       ),
       nextScreen: const start(),
       splashTransition: SplashTransition.fadeTransition,
-     // pageTransitionType: ,
-      duration: 3000,
+      duration: 300000,
       backgroundColor: Colors.white,
-
     );
   }
 }
