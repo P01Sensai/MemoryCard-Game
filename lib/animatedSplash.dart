@@ -28,11 +28,11 @@ class SplashScreen extends StatelessWidget {
             ),
             // SizedBox(height: 20),
             Text(
-              'Splash Screen testing',
+              'MemoryCard Game',
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 fontSize: 20,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.bold, color: Colors.deepPurpleAccent
               ),
             ),
           ],
@@ -40,7 +40,7 @@ class SplashScreen extends StatelessWidget {
       ),
       nextScreen: const start(),
       splashTransition: SplashTransition.fadeTransition,
-      duration: 300000,
+      duration: 3000,
       backgroundColor: Colors.white,
     );
   }

@@ -13,27 +13,27 @@ class SplashScreen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-      splash: Stack(
-        children: [
-          Center(
-            child: Image.network(
+      splash: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.network(
               'https://picsum.photos/100/100',
-              fit: BoxFit.cover,
+              width: 100, height: 100,
             ),
-          ),
-          BackdropFilter(
-            filter: ImageFilter.blur(sigmaX:0.5, sigmaY: 0.5),
-            child: Container(
-              color: Colors.blueAccent,
-            ),
-          ),
-        ],
-
+          ],
+        ),
       ),
       nextScreen: const start(),
       splashTransition: SplashTransition.rotationTransition,
       duration: 3000,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent, // Use transparent background
     );
   }
+
+
+
+
+
+
 }
