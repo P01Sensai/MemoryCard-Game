@@ -257,7 +257,11 @@ class MemoryCardGameState extends State<MemoryCardGame> {
     });
   }
   void closeAppUsingExit() {
-    exit(0);
+    _navigatetohome() async {
+      await Future.delayed( const Duration(milliseconds: 1000),() {});
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>start()));
+    }
+    _navigatetohome();
   }
 
 
