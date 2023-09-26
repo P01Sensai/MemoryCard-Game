@@ -38,7 +38,7 @@ class _startState extends State<start> {
               Navigator.of(context).pop();
               Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGame()));
               },
-              child: const Text('START'),
+              child: const Text('START GAME'),
             ),
             ElevatedButton(onPressed: (){
               Navigator.of(context).pop();
