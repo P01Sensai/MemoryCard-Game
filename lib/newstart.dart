@@ -25,14 +25,18 @@ class _startState extends State<newstart> {
       ) ,
       body: Container(
         padding: const EdgeInsets.all(20),
-        margin: const EdgeInsets.all(20),
-        child: const Text('Welcome to MemoryCard Game'),
+        margin: const EdgeInsets.fromLTRB(40, 10, 50, 40),
+        color: Colors.lightGreen,
+        child: const  Text( 'Welcome to MemoryCard Game',style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold, color: Colors.white,)
 
-      ),
+        ),
 
 
 
-    );
+
+      ));
 
   }
 }
