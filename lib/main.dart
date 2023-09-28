@@ -1,10 +1,11 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'animatedSplash.dart';
 import 'animatedsplash_2v.dart';
 import 'splash.dart';
+import 'splashscreen2.dart';
 import 'start.dart';
 //import 'package:audioplayers/audio_cache.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.blue,
       ),
 
-      home:  const start(),
+      home:  const SScreen2(),
       //home: const splash().
       debugShowCheckedModeBanner: false,
     );

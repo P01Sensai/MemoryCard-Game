@@ -42,6 +42,7 @@ class SplashScreen extends StatelessWidget {
       splashTransition: SplashTransition.fadeTransition,
       duration: 3000,
       backgroundColor: Colors.white,
+
     );
   }
 }
