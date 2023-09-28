@@ -1,6 +1,6 @@
 # memorycard_app3
 
-A new Flutter project.
+A new Flutter project, using dart oops varios pages defining different features
 
 ## Getting Started
 
