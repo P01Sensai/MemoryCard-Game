@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'level1.dart';
 import 'main.dart';
 
 class start extends StatefulWidget {
@@ -44,7 +45,11 @@ class _startState extends State<start> {
               Navigator.of(context).pop();
               closeAppUsingExit();
 
-            }, child: const Text('EXIT'))
+            }, child: const Text('EXIT')),
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).pop();
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGameLevel1()));
+            }, child: const Text('Easy'))
 
           ],
         ),

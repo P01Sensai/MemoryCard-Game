@@ -24,8 +24,7 @@ class MemoryCardGameState extends State<MemoryCardGameLevel1> {
     Colors.blue, Colors.blue,
     Colors.green, Colors.green,
     Colors.yellow, Colors.yellow,
-    Colors.black, Colors.black,
-    Colors.brown, Colors.brown,
+
   ];
 
   List<Color> cardFrontColors = List.filled(8, Colors.white);
@@ -64,7 +63,7 @@ class MemoryCardGameState extends State<MemoryCardGameLevel1> {
       } else {
         secondCardIndex = index;
         cardFrontColors[index] = cardColors[index];
-        Timer(const Duration(milliseconds: 50), () {
+        Timer(const Duration(milliseconds: 500), () {
           compareCards();
         });
       }
@@ -104,12 +103,13 @@ class MemoryCardGameState extends State<MemoryCardGameLevel1> {
       builder: (context) {
         return AlertDialog(
           title: const Text('Winner'),
+          backgroundColor: Colors.lightBlue,
           content: RichText(
             text: TextSpan(
               children: [
                 TextSpan(
                   text: winnerName ,
-                  style: const TextStyle(fontSize: 20, color: Colors.blue, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 20, color: Colors.black87, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -247,19 +247,19 @@ class MemoryCardGameState extends State<MemoryCardGameLevel1> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Minor Project'),
+        title: const Text('EASY'),
       ),
       body: Container(
         decoration: BoxDecoration(
           border: Border.all(
-            color: Colors.black,
+            color: Colors.black87,
             width: 2.0,
           ),
         ),
         child: Column(
           children: [
             Container(
-              color: Colors.white,
+              color: Colors.black87,
               padding: const EdgeInsets.all(16.0),
               child: const Center(
                 child: Text(
@@ -268,26 +268,29 @@ class MemoryCardGameState extends State<MemoryCardGameLevel1> {
                 ),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  numberOfPairs = 6;
-                  startGame();
-                });
-              },
-              child: const Text('Change Number of Pairs'),
-            ),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     setState(() {
+            //       numberOfPairs = 6;
+            //       startGame();
+            //     });
+            //   },
+            //   child: const Text('Change Number of Pairs'),
+            // ),
+            const SizedBox(height: 80,),
             Row(
+
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 PlayerScoreTile(playerName: 'Player 1', playerScore: player1Score, isCurrent: currentPlayer == 1),
                 PlayerScoreTile(playerName: 'Player 2', playerScore: player2Score, isCurrent: currentPlayer == 2),
               ],
             ),
+            const SizedBox(height: 30,),
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 6,
+                  crossAxisCount: 4,
                 ),
                 itemCount: numberOfPairs * 2,
                 itemBuilder: (context, index) {
@@ -299,7 +302,7 @@ class MemoryCardGameState extends State<MemoryCardGameLevel1> {
                       elevation: 8.0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
-                        side: const BorderSide(color: Colors.black, width: 2.0),
+                        side: const BorderSide(color: Colors.yellowAccent, width: 3.0),
                       ),
                       color: cardFrontColors[index],
                     ),
