@@ -34,20 +34,28 @@ class _startState extends State<newstart> {
           const SizedBox(height: 10,),
           Container(
             padding: const EdgeInsets.all(20),
-            margin: const EdgeInsets.fromLTRB(40, 10, 50, 40),
+            margin: const EdgeInsets.fromLTRB(50, 10, 50, 40),
             //color: Colors.lightGreen,
             decoration: BoxDecoration(
               border: Border.all(width: 2,color: Colors.transparent),
               borderRadius: const BorderRadius.all( Radius.circular(10)) ,
-              color: Colors.black26,
+              color: Colors.lightBlue,
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 10,
+                  spreadRadius: 1,
+                  offset: Offset(4,4),
+                )
+              ]
             ),
 
             child: const Text(
               'Welcome to MemoryCard Game',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 15,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.black26,
               ),
             ),
           ),

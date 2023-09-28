@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Memory Card App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Colors.blue,
+        scaffoldBackgroundColor: Colors.black,
       ),
 
       home:  const newstart(),
