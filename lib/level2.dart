@@ -308,7 +308,7 @@ class MemoryCardGameState extends State<MemoryCardLevel2> {
                       elevation: 8.0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
-                        side: const BorderSide(color: Colors.yellowAccent, width: 3.0),
+                        side: const BorderSide(color: Colors.yellowAccent, width: 2.0),
                       ),
                       color: cardFrontColors[index],
                     ),
