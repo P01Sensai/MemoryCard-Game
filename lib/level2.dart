@@ -9,15 +9,15 @@ import 'start.dart';
 
 
 
-class MemoryCardGameLevel2 extends StatefulWidget {
-  const MemoryCardGameLevel2({super.key});
+class MemoryCardLevel2 extends StatefulWidget {
+  const MemoryCardLevel2({super.key});
 
   @override
   MemoryCardGameState createState() => MemoryCardGameState();
 }
 
-class MemoryCardGameState extends State<MemoryCardGameLevel2> {
-  int numberOfPairs = 4;
+class MemoryCardGameState extends State<MemoryCardLevel2> {
+  int numberOfPairs = 6;
 
   List<Color> cardColors = [
     Colors.red, Colors.red,
@@ -30,7 +30,7 @@ class MemoryCardGameState extends State<MemoryCardGameLevel2> {
 
   ];
 
-  List<Color> cardFrontColors = List.filled(8, Colors.white);
+  List<Color> cardFrontColors = List.filled(8, Colors.black);
   List<bool> cardMatched = List.filled(8, false);
   int player1Score = 0;
   int player2Score = 0;
@@ -48,7 +48,7 @@ class MemoryCardGameState extends State<MemoryCardGameLevel2> {
 
     cardColors.shuffle();
 
-    cardFrontColors = List.filled(numberOfPairs * 2, Colors.white);
+    cardFrontColors = List.filled(numberOfPairs * 2, Colors.black);
     cardMatched = List.filled(numberOfPairs * 2, false);
     firstCardIndex = -1;
     secondCardIndex = -1;
@@ -86,8 +86,8 @@ class MemoryCardGameState extends State<MemoryCardGameLevel2> {
       });
     } else {
       setState(() {
-        cardFrontColors[firstCardIndex] = Colors.white;
-        cardFrontColors[secondCardIndex] = Colors.white;
+        cardFrontColors[firstCardIndex] = Colors.black;
+        cardFrontColors[secondCardIndex] = Colors.black;
         currentPlayer = (currentPlayer == 1) ? 2 : 1;
       });
     }
@@ -159,6 +159,7 @@ class MemoryCardGameState extends State<MemoryCardGameLevel2> {
       builder: (context) {
         return AlertDialog(
           title: const Text('Game Over'),
+          backgroundColor: Colors.amber,
           content: Text('Player 1: $player1Score points\nPlayer 2: $player2Score points\nWinner: $winnerName'),
           actions: [
             ElevatedButton(
@@ -176,7 +177,7 @@ class MemoryCardGameState extends State<MemoryCardGameLevel2> {
               child : const Text('Quit'),
             ),
           ],
-          backgroundColor: Colors.amber,
+
         );
       },
     );
@@ -252,12 +253,12 @@ class MemoryCardGameState extends State<MemoryCardGameLevel2> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('EASY'),
+        title: const Text('Medium'),
       ),
       body: Container(
         decoration: BoxDecoration(
           border: Border.all(
-            color: Colors.black87,
+            color: Colors.blue,
             width: 2.0,
           ),
         ),
@@ -273,15 +274,15 @@ class MemoryCardGameState extends State<MemoryCardGameLevel2> {
                 ),
               ),
             ),
-            // ElevatedButton(
-            //   onPressed: () {
-            //     setState(() {
-            //       numberOfPairs = 6;
-            //       startGame();
-            //     });
-            //   },
-            //   child: const Text('Change Number of Pairs'),
-            // ),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  numberOfPairs = 6;
+                  startGame();
+                });
+              },
+              child: const Text('Reset'),
+            ),
             const SizedBox(height: 80,),
             Row(
 

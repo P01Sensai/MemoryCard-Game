@@ -1,6 +1,7 @@
 import 'dart:io';
-
+import 'level2.dart';
 import 'package:flutter/material.dart';
+import 'package:memorycard_app3/level2.dart';
 import 'level1.dart';
 import 'main.dart';
 
@@ -49,7 +50,11 @@ class _startState extends State<start> {
             ElevatedButton(onPressed: (){
               Navigator.of(context).pop();
               Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGameLevel1()));
-            }, child: const Text('Easy'))
+            }, child: const Text('Easy')),
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).pop();
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardLevel2()));
+            }, child: const Text('Medium'))
 
           ],
         ),
