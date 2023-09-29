@@ -17,9 +17,9 @@ class SScreen2 extends StatelessWidget {
       splash:  Image.asset('assets/milad-fakurian-PGdW_bHDbpI-unsplash.jpg'),
       nextScreen: const start(),
       splashTransition: SplashTransition.sizeTransition,
-      pageTransitionType: PageTransitionType.rightToLeft,
+      pageTransitionType: PageTransitionType.fade,
       duration: 3000,
-      backgroundColor: Colors.lightBlue,
+      backgroundColor: Colors.purpleAccent,
 
     );
   }

@@ -313,6 +313,7 @@ class MemoryCardGameState extends State<MemoryCardGameLevel1> {
           ],
         ),
       ),
+      backgroundColor: Colors.blueGrey,
     );
   }
 }

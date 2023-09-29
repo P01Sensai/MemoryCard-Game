@@ -1,49 +1,22 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+
 import 'animatedSplash.dart';
 import 'animatedsplash_2v.dart';
-import 'newstart.dart';
 import 'splash.dart';
-import 'splashscreen2.dart';
 import 'start.dart';
-//import 'package:audioplayers/audio_cache.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Memory Card App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Colors.black,
-      ),
-
-      home:  const SScreen2(),
-      //home: const splash().
-
-      debugShowCheckedModeBanner: false,
-
-    );
-  }
-}
 
 
-class MemoryCardGame extends StatefulWidget {
-  const MemoryCardGame({super.key});
+
+class MemoryCardGameLevel2 extends StatefulWidget {
+  const MemoryCardGameLevel2({super.key});
 
   @override
   MemoryCardGameState createState() => MemoryCardGameState();
 }
 
-class MemoryCardGameState extends State<MemoryCardGame> {
+class MemoryCardGameState extends State<MemoryCardGameLevel2> {
   int numberOfPairs = 4;
 
   List<Color> cardColors = [
@@ -51,8 +24,10 @@ class MemoryCardGameState extends State<MemoryCardGame> {
     Colors.blue, Colors.blue,
     Colors.green, Colors.green,
     Colors.yellow, Colors.yellow,
-    Colors.black, Colors.black,
-    Colors.brown, Colors.brown,
+    Colors.purple, Colors.purple,
+    Colors.white, Colors.white,
+
+
   ];
 
   List<Color> cardFrontColors = List.filled(8, Colors.white);
@@ -72,7 +47,7 @@ class MemoryCardGameState extends State<MemoryCardGame> {
   void startGame() {
 
     cardColors.shuffle();
-    
+
     cardFrontColors = List.filled(numberOfPairs * 2, Colors.white);
     cardMatched = List.filled(numberOfPairs * 2, false);
     firstCardIndex = -1;
@@ -91,7 +66,7 @@ class MemoryCardGameState extends State<MemoryCardGame> {
       } else {
         secondCardIndex = index;
         cardFrontColors[index] = cardColors[index];
-        Timer(const Duration(milliseconds: 50), () {
+        Timer(const Duration(milliseconds: 500), () {
           compareCards();
         });
       }
@@ -131,17 +106,18 @@ class MemoryCardGameState extends State<MemoryCardGame> {
       builder: (context) {
         return AlertDialog(
           title: const Text('Winner'),
+          backgroundColor: Colors.lightBlue,
           content: RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: winnerName ,
-                        style: const TextStyle(fontSize: 20, color: Colors.blue, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: winnerName ,
+                  style: const TextStyle(fontSize: 20, color: Colors.black87, fontWeight: FontWeight.bold),
                 ),
-           actions: [
+              ],
+            ),
+          ),
+          actions: [
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pop();
@@ -168,6 +144,7 @@ class MemoryCardGameState extends State<MemoryCardGame> {
     showWinnerDialog(winnerName);
   }
   void showGameOverDialog() {
+
     String winnerName = '';
     if (player1Score > player2Score) {
       winnerName = 'Player 1';
@@ -199,6 +176,7 @@ class MemoryCardGameState extends State<MemoryCardGame> {
               child : const Text('Quit'),
             ),
           ],
+          backgroundColor: Colors.amber,
         );
       },
     );
@@ -274,19 +252,19 @@ class MemoryCardGameState extends State<MemoryCardGame> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Minor Project'),
+        title: const Text('EASY'),
       ),
       body: Container(
         decoration: BoxDecoration(
           border: Border.all(
-            color: Colors.black,
+            color: Colors.black87,
             width: 2.0,
           ),
         ),
         child: Column(
           children: [
             Container(
-              color: Colors.white,
+              color: Colors.black87,
               padding: const EdgeInsets.all(16.0),
               child: const Center(
                 child: Text(
@@ -295,26 +273,29 @@ class MemoryCardGameState extends State<MemoryCardGame> {
                 ),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  numberOfPairs = 6;
-                  startGame();
-                });
-              },
-              child: const Text('Change Number of Pairs'),
-            ),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     setState(() {
+            //       numberOfPairs = 6;
+            //       startGame();
+            //     });
+            //   },
+            //   child: const Text('Change Number of Pairs'),
+            // ),
+            const SizedBox(height: 80,),
             Row(
+
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 PlayerScoreTile(playerName: 'Player 1', playerScore: player1Score, isCurrent: currentPlayer == 1),
                 PlayerScoreTile(playerName: 'Player 2', playerScore: player2Score, isCurrent: currentPlayer == 2),
               ],
             ),
+            const SizedBox(height: 30,),
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 6,
+                  crossAxisCount: 4,
                 ),
                 itemCount: numberOfPairs * 2,
                 itemBuilder: (context, index) {
@@ -326,7 +307,7 @@ class MemoryCardGameState extends State<MemoryCardGame> {
                       elevation: 8.0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
-                        side: const BorderSide(color: Colors.black, width: 2.0),
+                        side: const BorderSide(color: Colors.yellowAccent, width: 3.0),
                       ),
                       color: cardFrontColors[index],
                     ),

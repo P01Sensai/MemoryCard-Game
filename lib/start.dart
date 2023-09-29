@@ -54,6 +54,7 @@ class _startState extends State<start> {
           ],
         ),
       ),
+      backgroundColor: Colors.amber,
 
 
 
