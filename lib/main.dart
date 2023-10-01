@@ -8,6 +8,7 @@ import 'newstart.dart';
 import 'splash.dart';
 import 'splashscreen2.dart';
 import 'start.dart';
+import 'testingsplash.dart';
 //import 'package:audioplayers/audio_cache.dart';
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black,
       ),
 
-      home:  const SScreen2(),
+      home:  const SScreen3(),
       //home: const splash().
 
       debugShowCheckedModeBanner: false,

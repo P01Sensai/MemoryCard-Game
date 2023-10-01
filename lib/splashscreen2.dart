@@ -15,18 +15,64 @@ class SScreen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return AnimatedSplashScreen(
-      splash:  Image.asset('assets/milad-fakurian-PGdW_bHDbpI-unsplash.jpg'),
-      nextScreen: const start(),
-      splashTransition: SplashTransition.decoratedBoxTransition,
-      pageTransitionType: PageTransitionType.fade,
-      duration: 1000,
-      backgroundColor: Colors.purpleAccent,
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(image: AssetImage('assets/sharon-pittaway-iMdsjoiftZo-unsplash.jpg'
+        ),
+          fit: BoxFit.cover,
+        )
+      ),
+      child: AnimatedSplashScreen(
+
+        splash:  Image.asset('assets/milad-fakurian-PGdW_bHDbpI-unsplash.jpg'),
+        nextScreen: const start(),
+        splashTransition: SplashTransition.decoratedBoxTransition,
+        pageTransitionType: PageTransitionType.leftToRightWithFade,
+        duration: 1000,
+        backgroundColor: Colors.transparent,
 
 
+      ),
     );
   }
 }
+// class SScreen2 extends StatelessWidget {
+//   const SScreen2({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return AnimatedSplashScreen(
+//       splash: Stack(
+//         children: [
+//           // Background Image
+//           Image.asset(
+//             'assets/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg',
+//             width: double.maxFinite,
+//             height: double.maxFinite,
+//             fit: BoxFit.cover,
+//           ),
+//
+//           // Content on top of the background
+//           Center(
+//             child: Column(
+//               mainAxisAlignment: MainAxisAlignment.center,
+//               children: [
+//                 // Your other widgets go here
+//                 Image.asset('assets/milad-fakurian-PGdW_bHDbpI-unsplash.jpg'),
+//               ],
+//             ),
+//           ),
+//         ],
+//       ),
+//       nextScreen: const start(),
+//       splashTransition: SplashTransition.sizeTransition,
+//       pageTransitionType: PageTransitionType.fade,
+//       duration: 3000,
+//       backgroundColor: Colors.transparent, // Use transparent background for the stack
+//     );
+//   }
+// }
+
 
 // class SScreen2 extends StatelessWidget {
 //   const SScreen2({Key? key}) : super(key: key);
