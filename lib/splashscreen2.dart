@@ -9,33 +9,84 @@ import 'main.dart';
 import 'start.dart';
 
 
+// class SScreen2 extends StatelessWidget {
+//   const SScreen2({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//
+//     return Container(
+//       decoration: const BoxDecoration(
+//         image: DecorationImage(image: AssetImage('assets/sharon-pittaway-iMdsjoiftZo-unsplash.jpg'
+//         ),
+//           fit: BoxFit.cover,
+//         )
+//       ),
+//       child: AnimatedSplashScreen(
+//
+//         splash:  Image.asset('assets/milad-fakurian-PGdW_bHDbpI-unsplash.jpg'),
+//         nextScreen: const start(),
+//         splashTransition: SplashTransition.decoratedBoxTransition,
+//         pageTransitionType: PageTransitionType.leftToRightWithFade,
+//         duration: 1000,
+//         backgroundColor: Colors.transparent,
+//
+//
+//       ),
+//     );
+//   }
+// }
+
+//different layout
 class SScreen2 extends StatelessWidget {
   const SScreen2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       decoration: const BoxDecoration(
-        image: DecorationImage(image: AssetImage('assets/sharon-pittaway-iMdsjoiftZo-unsplash.jpg'
-        ),
+        image: DecorationImage(
+          image: AssetImage('assets/sharon-pittaway-iMdsjoiftZo-unsplash.jpg'),
           fit: BoxFit.cover,
-        )
+
+        ),
       ),
       child: AnimatedSplashScreen(
+        splash: Container(
+        width: 120,
+        height: 120,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          //border: Border.all(),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.white.withOpacity(0.5),
+              blurRadius: 20,
+              spreadRadius: 1,
+              offset: const Offset(0, 5),
 
-        splash:  Image.asset('assets/milad-fakurian-PGdW_bHDbpI-unsplash.jpg'),
+            ),
+          ],
+        ),
+        child: ClipOval(
+
+          child: Image.asset(
+            'assets/milad-fakurian-PGdW_bHDbpI-unsplash.jpg',
+            fit: BoxFit.cover,
+
+          ),
+        ),
+      ),
         nextScreen: const start(),
-        splashTransition: SplashTransition.decoratedBoxTransition,
+        splashTransition: SplashTransition.fadeTransition,
         pageTransitionType: PageTransitionType.leftToRightWithFade,
         duration: 1000,
         backgroundColor: Colors.transparent,
-
-
       ),
     );
   }
 }
+
 // class SScreen2 extends StatelessWidget {
 //   const SScreen2({Key? key}) : super(key: key);
 //
