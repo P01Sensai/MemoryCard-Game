@@ -26,12 +26,17 @@ class _startState extends State<newstart> {
         title: const Center(child: Text('MemoryCard Game',style: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.bold,
-          color: Colors.purple),)),
+          color: Colors.amber),)),
       ),
 
+
+
       body: Column(
+
+
         //mainAxisAlignment: MainAxisAlignment.center,
         children: [
+
           const SizedBox(height: 10,),
           Container(
             padding: const EdgeInsets.all(20),
@@ -81,6 +86,10 @@ class _startState extends State<newstart> {
             margin: const EdgeInsets.fromLTRB(40, 10, 50, 40),
             //color: Colors.blue,
             decoration: BoxDecoration(
+              image: const DecorationImage(
+                image: AssetImage('assets/alexander-grey-62vi3TG5EDg-unsplash.jpg'),
+                fit: BoxFit.cover,
+              ),
                 border: Border.all(width: 1,color: Colors.white),
                 borderRadius: const BorderRadius.all( Radius.circular(10)) ,
                 color: Colors.amber,
@@ -106,7 +115,6 @@ class _startState extends State<newstart> {
                   // ),
 
                   ElevatedButton(onPressed: (){
-
                     Navigator.of(context).pop();
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGameLevel1()));
                   }, child: const Text(' Easy ')),
@@ -131,6 +139,22 @@ class _startState extends State<newstart> {
           ),
 
           // Add more containers here
+      Align(
+        alignment: Alignment.bottomRight,
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: FloatingActionButton(
+            onPressed: () {
+              // Handle back button press
+
+              Navigator.of(context).pop();
+              closeAppUsingExit();
+            },
+            child: Icon(Icons.arrow_back),
+            backgroundColor: Colors.amber,
+          ),
+        ),
+      ),
         ],
       ),
     );
