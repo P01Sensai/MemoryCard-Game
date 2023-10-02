@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'level1.dart';
+import 'level2.dart';
 import 'main.dart';
 
 class newstart extends StatefulWidget {
@@ -42,10 +43,10 @@ class _startState extends State<newstart> {
               color: Colors.lightBlue,
               boxShadow: const [
                 BoxShadow(
-                  color: Colors.black26,
+                  color: Colors.white54,
                   blurRadius: 10,
                   spreadRadius: 1,
-                  offset: Offset(4,4),
+                  offset: Offset(0,4),
                 )
               ]
             ),
@@ -55,7 +56,7 @@ class _startState extends State<newstart> {
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
-                color: Colors.black26,
+                color: Colors.amber,
               ),
             ),
           ),
@@ -73,6 +74,59 @@ class _startState extends State<newstart> {
                 color: Colors.white,
               ),
             ),
+
+          ),
+          Container(
+            padding: const EdgeInsets.all(20),
+            margin: const EdgeInsets.fromLTRB(40, 10, 50, 40),
+            //color: Colors.blue,
+            decoration: BoxDecoration(
+                border: Border.all(width: 1,color: Colors.white),
+                borderRadius: const BorderRadius.all( Radius.circular(10)) ,
+                color: Colors.amber,
+                // boxShadow: const [
+                //   BoxShadow(
+                //     color: Colors.white54,
+                //     blurRadius: 10,
+                //     spreadRadius: 1,
+                //     offset: Offset(0,4),
+                //   )
+                //]
+            ),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // ElevatedButton(
+                  //   onPressed: () {
+                  //     Navigator.of(context).pop();
+                  //     Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGame()));
+                  //   },
+                  //   child: const Text('START GAME'),
+                  // ),
+
+                  ElevatedButton(onPressed: (){
+
+                    Navigator.of(context).pop();
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGameLevel1()));
+                  }, child: const Text(' Easy ')),
+                  ElevatedButton(onPressed: (){
+                    Navigator.of(context).pop();
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardLevel2()));
+                  }, child: const Text('Medium'))
+
+                ],
+              ),
+            ),
+
+            // child: const Text(
+            //   'Choose Difficulty Level',
+            //   style: TextStyle(
+            //     fontSize: 16,
+            //     fontWeight: FontWeight.bold,
+            //     color: Colors.white,
+            //   ),
+            // ),
 
           ),
 
