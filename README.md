@@ -1,6 +1,10 @@
 # memorycard_app3
 
-A new Flutter project, using dart oops varios pages defining different features
+A new Flutter project, using dart oops various pages defining different features
+it is a multi page app :
+  splash screen
+  start page
+  different interface and page for different difficulty level
 
 ## Getting Started
 
