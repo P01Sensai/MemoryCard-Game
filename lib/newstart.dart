@@ -81,6 +81,7 @@ class _startState extends State<newstart> {
             ),
 
           ),
+          const SizedBox(height: 20),
           Container(
             padding: const EdgeInsets.all(20),
             margin: const EdgeInsets.fromLTRB(40, 10, 50, 40),
@@ -121,7 +122,11 @@ class _startState extends State<newstart> {
                   ElevatedButton(onPressed: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardLevel2()));
-                  }, child: const Text('Medium'))
+                  }, child: const Text('Medium')),
+                  ElevatedButton(onPressed: (){
+                    Navigator.of(context).pop();
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGame()));
+                  }, child: const Text('Hard'))
 
                 ],
               ),

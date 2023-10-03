@@ -80,7 +80,7 @@ class SScreen2 extends StatelessWidget {
         nextScreen: const newstart(),
         splashTransition: SplashTransition.decoratedBoxTransition,
         pageTransitionType: PageTransitionType.fade,
-        duration: 10000,
+        duration: 500,
         backgroundColor: Colors.transparent,
       ),
     );
