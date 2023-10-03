@@ -243,7 +243,7 @@ class MemoryCardGameState extends State<MemoryCardLevel2> {
   void closeAppUsingExit() {
     _navigatetohome() async {
       await Future.delayed( const Duration(milliseconds: 1000),() {});
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>newstart()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const newstart()));
     }
     _navigatetohome();
   }
@@ -325,10 +325,10 @@ class MemoryCardGameState extends State<MemoryCardLevel2> {
                   onPressed: () {
                     // Handle back button press
                     Navigator.of(context).pop();
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>newstart()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const newstart()));
                   },
                   backgroundColor: Colors.blue,
-                  child: Icon(Icons.arrow_back),
+                  child: const Icon(Icons.arrow_back),
 
                 ),
               ),

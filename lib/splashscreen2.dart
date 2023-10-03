@@ -54,26 +54,25 @@ class SScreen2 extends StatelessWidget {
       ),
       child: AnimatedSplashScreen(
         splash: Container(
-        width: 120,
-        height: 120,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           //border: Border.all(),
           boxShadow: [
             BoxShadow(
-              color: Colors.white.withOpacity(0.5),
+              color: Colors.white.withOpacity(1),
               blurRadius: 20,
-              spreadRadius: 1,
-              offset: const Offset(0, 5),
+              spreadRadius: 3,
+              offset: const Offset(1,5),
 
             ),
           ],
         ),
+        height: 200,
         child: ClipOval(
 
           child: Image.asset(
-            'assets/milad-fakurian-PGdW_bHDbpI-unsplash.jpg',
-            fit: BoxFit.cover,
+            'assets/Screenshot 2023-09-21 114811.jpg',
+            fit: BoxFit.fill,
 
           ),
         ),
@@ -81,7 +80,7 @@ class SScreen2 extends StatelessWidget {
         nextScreen: const newstart(),
         splashTransition: SplashTransition.decoratedBoxTransition,
         pageTransitionType: PageTransitionType.fade,
-        duration: 100,
+        duration: 10000,
         backgroundColor: Colors.transparent,
       ),
     );
