@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black,
       ),
 
-      home:  const newstart(),
+      home:  const  SScreen2(),
       //home: const splash().
 
       debugShowCheckedModeBanner: false,

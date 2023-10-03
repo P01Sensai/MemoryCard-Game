@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:memorycard_app3/newstart.dart';
 
 import 'animatedSplash.dart';
 import 'animatedsplash_2v.dart';
@@ -236,7 +238,7 @@ class MemoryCardGameState extends State<MemoryCardGameLevel1> {
   void closeAppUsingExit() {
     _navigatetohome() async {
       await Future.delayed( const Duration(milliseconds: 1000),() {});
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>start()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>newstart()));
     }
     _navigatetohome();
   }
@@ -302,7 +304,7 @@ class MemoryCardGameState extends State<MemoryCardGameLevel1> {
                       elevation: 8.0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
-                        side: const BorderSide(color: Colors.yellowAccent, width: 3.0),
+                        side: const BorderSide(color: Colors.black, width: 3.0),
                       ),
                       color: cardFrontColors[index],
                     ),
@@ -310,10 +312,25 @@ class MemoryCardGameState extends State<MemoryCardGameLevel1> {
                 },
               ),
             ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: FloatingActionButton(
+                  onPressed: () {
+                    // Handle back button press
+                    Navigator.of(context).pop();
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>newstart()));
+                  },
+                  child: Icon(Icons.arrow_back),
+                  backgroundColor: Colors.blue,
+                ),
+              ),
+            ),
           ],
         ),
       ),
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.amber,
     );
   }
 }
@@ -346,6 +363,7 @@ class PlayerScoreTile extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+
         ],
       ),
     );

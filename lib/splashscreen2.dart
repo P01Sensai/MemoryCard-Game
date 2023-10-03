@@ -6,6 +6,7 @@ import 'package:page_transition/page_transition.dart';
 
 
 import 'main.dart';
+import 'newstart.dart';
 import 'start.dart';
 
 
@@ -77,10 +78,10 @@ class SScreen2 extends StatelessWidget {
           ),
         ),
       ),
-        nextScreen: const start(),
-        splashTransition: SplashTransition.fadeTransition,
-        pageTransitionType: PageTransitionType.leftToRightWithFade,
-        duration: 1000,
+        nextScreen: const newstart(),
+        splashTransition: SplashTransition.decoratedBoxTransition,
+        pageTransitionType: PageTransitionType.fade,
+        duration: 100,
         backgroundColor: Colors.transparent,
       ),
     );

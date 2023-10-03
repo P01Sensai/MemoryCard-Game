@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'animatedSplash.dart';
 import 'animatedsplash_2v.dart';
+import 'newstart.dart';
 import 'splash.dart';
 import 'start.dart';
 
@@ -242,7 +243,7 @@ class MemoryCardGameState extends State<MemoryCardLevel2> {
   void closeAppUsingExit() {
     _navigatetohome() async {
       await Future.delayed( const Duration(milliseconds: 1000),() {});
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>start()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>newstart()));
     }
     _navigatetohome();
   }
@@ -314,6 +315,22 @@ class MemoryCardGameState extends State<MemoryCardLevel2> {
                     ),
                   );
                 },
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: FloatingActionButton(
+                  onPressed: () {
+                    // Handle back button press
+                    Navigator.of(context).pop();
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>newstart()));
+                  },
+                  backgroundColor: Colors.blue,
+                  child: Icon(Icons.arrow_back),
+
+                ),
               ),
             ),
           ],
