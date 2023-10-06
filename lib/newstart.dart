@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'level1.dart';
 import 'level2.dart';
+import 'level3.dart';
 import 'main.dart';
 
 class newstart extends StatefulWidget {
@@ -172,7 +173,7 @@ class _startState extends State<newstart> {
                   }, child: const Text('Medium')),
                   ElevatedButton(onPressed: (){
                     Navigator.of(context).pop();
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGame()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardLevel3()));
                   }, child: const Text('Hard'))
 
                 ],
