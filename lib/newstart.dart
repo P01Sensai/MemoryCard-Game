@@ -28,6 +28,7 @@ class _startState extends State<newstart> {
           height: 50, // Specify the height as needed
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
+
           ),
 
           child: Image.asset('assets/Screenshot 2023-09-21 114811.jpg'),
@@ -45,13 +46,12 @@ class _startState extends State<newstart> {
 
       body: Column(
 
-
         //mainAxisAlignment: MainAxisAlignment.center,
         children: [
 
           const SizedBox(height: 10,),
           Container(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
             margin: const EdgeInsets.fromLTRB(50, 10, 50, 40),
             //color: Colors.lightGreen,
             decoration: BoxDecoration(
@@ -76,9 +76,11 @@ class _startState extends State<newstart> {
                 color: Colors.amber,
               ),
             ),
+
           ),
-          const SizedBox(height: 20,),
+
           Container(
+
             padding: const EdgeInsets.all(20),
             margin: const EdgeInsets.fromLTRB(40, 10, 50, 40),
             //color: Colors.blue,
@@ -92,6 +94,38 @@ class _startState extends State<newstart> {
               ),
             ),
 
+          ),
+          Container(
+            padding: const EdgeInsets.all(20),
+            margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+            //color: Colors.blue,
+            decoration: BoxDecoration(
+              border: Border.all(width: 1,color: Colors.white),
+              borderRadius: const BorderRadius.all( Radius.circular(10)) ,
+              color: Colors.amber,
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.lightBlueAccent,
+                  blurRadius: 10,
+                  spreadRadius: 1,
+                  offset: Offset(0,4),
+                )
+              ]
+            ),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGame()));
+                    },
+                    child: const Text('Instant Start'),
+                  ),
+                ],
+              ),
+            ),
           ),
           const SizedBox(height: 20),
           Container(
@@ -115,6 +149,7 @@ class _startState extends State<newstart> {
                 //   )
                 //]
             ),
+
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
