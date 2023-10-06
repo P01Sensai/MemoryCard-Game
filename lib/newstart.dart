@@ -96,13 +96,13 @@ class _startState extends State<newstart> {
 
           ),
           Container(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(2),
             margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
             //color: Colors.blue,
             decoration: BoxDecoration(
               border: Border.all(width: 1,color: Colors.white),
               borderRadius: const BorderRadius.all( Radius.circular(10)) ,
-              color: Colors.amber,
+              color: Colors.black,
               boxShadow: const [
                 BoxShadow(
                   color: Colors.lightBlueAccent,
