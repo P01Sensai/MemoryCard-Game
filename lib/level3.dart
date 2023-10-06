@@ -295,7 +295,7 @@ class MemoryCardGameState extends State<MemoryCardLevel3> {
                 PlayerScoreTile(playerName: 'Player 2', playerScore: player2Score, isCurrent: currentPlayer == 2),
               ],
             ),
-            const SizedBox(height: 30,),
+            const SizedBox(height: 20,),
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
