@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'info.dart';
 import 'level1.dart';
 import 'level2.dart';
 import 'level3.dart';
@@ -201,13 +202,29 @@ class _startState extends State<newstart> {
               // Handle back button press
 
               Navigator.of(context).pop();
-              closeAppUsingExit();
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Info()));
             },
             child: Icon(Icons.arrow_back),
             backgroundColor: Colors.amber,
           ),
         ),
       ),
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: FloatingActionButton(
+                onPressed: () {
+                  // Handle back button press
+
+                  Navigator.of(context).pop();
+                  closeAppUsingExit();
+                },
+                child: Icon(Icons.info),
+                backgroundColor: Colors.amber,
+              ),
+            ),
+          ),
         ],
       ),
     );

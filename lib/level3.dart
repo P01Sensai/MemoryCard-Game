@@ -256,7 +256,7 @@ class MemoryCardGameState extends State<MemoryCardLevel3> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Medium'),
+        title: const Text('Hard'),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -295,7 +295,7 @@ class MemoryCardGameState extends State<MemoryCardLevel3> {
                 PlayerScoreTile(playerName: 'Player 2', playerScore: player2Score, isCurrent: currentPlayer == 2),
               ],
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(height: 10,),
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
