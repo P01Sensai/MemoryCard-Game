@@ -129,7 +129,7 @@ class _startState extends State<newstart> {
               ),
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           Container(
             padding: const EdgeInsets.all(20),
             margin: const EdgeInsets.fromLTRB(40, 10, 50, 40),
@@ -156,13 +156,6 @@ class _startState extends State<newstart> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // ElevatedButton(
-                  //   onPressed: () {
-                  //     Navigator.of(context).pop();
-                  //     Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGame()));
-                  //   },
-                  //   child: const Text('START GAME'),
-                  // ),
 
                   ElevatedButton(onPressed: (){
                     Navigator.of(context).pop();
@@ -200,7 +193,6 @@ class _startState extends State<newstart> {
           child: FloatingActionButton(
             onPressed: () {
               // Handle back button press
-
               Navigator.of(context).pop();
               Navigator.push(context, MaterialPageRoute(builder: (context)=>Info()));
             },
