@@ -121,7 +121,7 @@ class _startState extends State<newstart> {
                   ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).pop();
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGame()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const MemoryCardGame()));
                     },
                     child: const Text('Instant Start'),
                   ),
@@ -159,15 +159,15 @@ class _startState extends State<newstart> {
 
                   ElevatedButton(onPressed: (){
                     Navigator.of(context).pop();
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardGameLevel1()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const MemoryCardGameLevel1()));
                   }, child: const Text(' Easy ')),
                   ElevatedButton(onPressed: (){
                     Navigator.of(context).pop();
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardLevel2()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const MemoryCardLevel2()));
                   }, child: const Text('Medium')),
                   ElevatedButton(onPressed: (){
                     Navigator.of(context).pop();
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MemoryCardLevel3()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const MemoryCardLevel3()));
                   }, child: const Text('Hard'))
 
                 ],
@@ -186,7 +186,7 @@ class _startState extends State<newstart> {
           ),
 
           // Add more containers here
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           Stack(
             children: [
               Align(
@@ -197,9 +197,9 @@ class _startState extends State<newstart> {
                     onPressed: () {
                       // Handle back button press
                       Navigator.of(context).pop();
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Info()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Info()));
                     },
-                    child: Icon(Icons.arrow_back),
+                    child: const Icon(Icons.arrow_back),
                     backgroundColor: Colors.amber,
                   ),
                 ),
@@ -214,7 +214,7 @@ class _startState extends State<newstart> {
                       Navigator.of(context).pop();
                       closeAppUsingExit();
                     },
-                    child: Icon(Icons.info),
+                    child: const Icon(Icons.info),
                     backgroundColor: Colors.amber,
                   ),
                 ),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'animatedSplash.dart';
 import 'animatedsplash_2v.dart';
+import 'info.dart';
 import 'newstart.dart';
 import 'splash.dart';
 import 'splashscreen2.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       ),
 
 
-      home:  const  SScreen2(),
+      home:  const  Info(),
       //home: const splash().
 
       debugShowCheckedModeBanner: false,
