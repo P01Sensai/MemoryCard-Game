@@ -186,37 +186,62 @@ class _startState extends State<newstart> {
           ),
 
           // Add more containers here
-      Align(
-        alignment: Alignment.bottomRight,
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: FloatingActionButton(
-            onPressed: () {
-              // Handle back button press
-              Navigator.of(context).pop();
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Info()));
-            },
-            child: Icon(Icons.arrow_back),
-            backgroundColor: Colors.amber,
-          ),
-        ),
-      ),
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: FloatingActionButton(
-                onPressed: () {
-                  // Handle back button press
-
-                  Navigator.of(context).pop();
-                  closeAppUsingExit();
-                },
-                child: Icon(Icons.info),
-                backgroundColor: Colors.amber,
-              ),
+          Positioned(
+            bottom: 20, // Adjust the bottom value as needed
+            right: 20, // Adjust the right value as needed
+            child: FloatingActionButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Info()));
+              },
+              child: Icon(Icons.arrow_back),
+              backgroundColor: Colors.amber,
             ),
           ),
+
+          Positioned(
+            bottom: 20, // Adjust the bottom value as needed
+            left: 20, // Adjust the left value as needed
+            child: FloatingActionButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                closeAppUsingExit();
+              },
+              child: Icon(Icons.info),
+              backgroundColor: Colors.amber,
+            ),
+          ),
+      // Align(
+      //   alignment: Alignment.bottomRight,
+      //   child: Padding(
+      //     padding: const EdgeInsets.all(20.0),
+      //     child: FloatingActionButton(
+      //       onPressed: () {
+      //         // Handle back button press
+      //         Navigator.of(context).pop();
+      //         Navigator.push(context, MaterialPageRoute(builder: (context)=>Info()));
+      //       },
+      //       child: Icon(Icons.arrow_back),
+      //       backgroundColor: Colors.amber,
+      //     ),
+      //   ),
+      // ),
+      //     Align(
+      //       alignment: Alignment.bottomLeft,
+      //       child: Padding(
+      //         padding: const EdgeInsets.all(20.0),
+      //         child: FloatingActionButton(
+      //           onPressed: () {
+      //             // Handle back button press
+      //
+      //             Navigator.of(context).pop();
+      //             closeAppUsingExit();
+      //           },
+      //           child: Icon(Icons.info),
+      //           backgroundColor: Colors.amber,
+      //         ),
+      //       ),
+      //     ),
         ],
       ),
     );
