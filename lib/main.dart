@@ -266,7 +266,7 @@ class MemoryCardGameState extends State<MemoryCardGame> {
   void closeAppUsingExit() {
     _navigatetohome() async {
       await Future.delayed( const Duration(milliseconds: 1000),() {});
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>start()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const newstart()));
     }
     _navigatetohome();
   }

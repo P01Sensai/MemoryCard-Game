@@ -37,9 +37,7 @@ class InfoState extends State<Info> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Align(
-                alignment: Alignment.topCenter,
-              child: Container(
+              Container(
                 padding: const EdgeInsets.all(20),
                 //margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -50,7 +48,6 @@ class InfoState extends State<Info> {
                 child: const Text(
                   'MINOR PROJECT MEMBERS', style:  TextStyle( fontSize: 20, fontWeight: FontWeight.bold, color:  Colors.white),
                 ),
-              ),
               ),
               Container(
                 padding: const EdgeInsets.all(20),
