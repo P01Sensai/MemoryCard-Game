@@ -37,7 +37,9 @@ class InfoState extends State<Info> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              Align(
+                alignment: Alignment.topCenter,
+              child: Container(
                 padding: const EdgeInsets.all(20),
                 //margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -49,15 +51,17 @@ class InfoState extends State<Info> {
                   'MINOR PROJECT MEMBERS', style:  TextStyle( fontSize: 20, fontWeight: FontWeight.bold, color:  Colors.white),
                 ),
               ),
+              ),
               Container(
                 padding: const EdgeInsets.all(20),
                 margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.blue,
+                  border:  Border.all(width: 2, color: Colors.black),
+                  color: Colors.amberAccent,
                 ),
                 child: const Text(
-                  'Pramanshu Prajapati\nAditya Bhardwaj\nAbhay Sharma\nHarsh Srivastava ',
+                  '1). Pramanshu Prajapati\n2). Aditya Bhardwaj\n3). Harsh Srivastava\n4). Abhay Sharma ',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -65,54 +69,54 @@ class InfoState extends State<Info> {
                   ),
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(20),
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.blue,
-                ),
-                child: const Text(
-                  'Aditya Bhardwaj',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(20),
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.blue,
-                ),
-                child: const Text(
-                  'Abhay Sharma',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(20),
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.blue,
-                ),
-                child: const Text(
-                  'Harsh Srivastava',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
+              // Container(
+              //   padding: const EdgeInsets.all(20),
+              //   margin: const EdgeInsets.all(10),
+              //   decoration: BoxDecoration(
+              //     borderRadius: BorderRadius.circular(10),
+              //     color: Colors.blue,
+              //   ),
+              //   child: const Text(
+              //     'Aditya Bhardwaj',
+              //     style: TextStyle(
+              //       fontSize: 20,
+              //       fontWeight: FontWeight.bold,
+              //       color: Colors.white,
+              //     ),
+              //   ),
+              // ),
+              // Container(
+              //   padding: const EdgeInsets.all(20),
+              //   margin: const EdgeInsets.all(10),
+              //   decoration: BoxDecoration(
+              //     borderRadius: BorderRadius.circular(10),
+              //     color: Colors.blue,
+              //   ),
+              //   child: const Text(
+              //     'Abhay Sharma',
+              //     style: TextStyle(
+              //       fontSize: 20,
+              //       fontWeight: FontWeight.bold,
+              //       color: Colors.white,
+              //     ),
+              //   ),
+              // ),
+              // Container(
+              //   padding: const EdgeInsets.all(20),
+              //   margin: const EdgeInsets.all(10),
+              //   decoration: BoxDecoration(
+              //     borderRadius: BorderRadius.circular(10),
+              //     color: Colors.blue,
+              //   ),
+              //   child: const Text(
+              //     'Harsh Srivastava',
+              //     style: TextStyle(
+              //       fontSize: 20,
+              //       fontWeight: FontWeight.bold,
+              //       color: Colors.white,
+              //     ),
+              //   ),
+              // ),
               // Add more information here if needed
             ],
           ),
