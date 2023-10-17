@@ -57,7 +57,7 @@ class InfoState extends State<Info> {
                   color: Colors.blue,
                 ),
                 child: const Text(
-                  'Pramanshu Prajapati',
+                  'Pramanshu Prajapati\nAditya Bhardwaj\nAbhay Sharma\nHarsh Srivastava ',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
