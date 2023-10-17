@@ -19,6 +19,9 @@ class _startState extends State<newstart> {
   void closeAppUsingExit() {
     exit(0);
   }
+  void appInfo() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const Info()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -197,7 +200,8 @@ class _startState extends State<newstart> {
                     onPressed: () {
                       // Handle back button press
                       Navigator.of(context).pop();
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Info()));
+                      appInfo();
+
                     },
                     child: const Icon(Icons.arrow_back),
                     backgroundColor: Colors.amber,
@@ -208,14 +212,13 @@ class _startState extends State<newstart> {
                 alignment: Alignment.bottomLeft,
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
-                  child: FloatingActionButton(
+                  child: ElevatedButton(
                     onPressed: () {
                       // Handle back button press
                       Navigator.of(context).pop();
                       closeAppUsingExit();
                     },
                     child: const Icon(Icons.info),
-                    backgroundColor: Colors.amber,
                   ),
                 ),
               ),

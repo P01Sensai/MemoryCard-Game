@@ -286,7 +286,7 @@ class MemoryCardGameState extends State<MemoryCardLevel3> {
               },
               child: const Text('Reset'),
             ),
-            const SizedBox(height: 80,),
+            const SizedBox(height: 60,),
             Row(
 
               mainAxisAlignment: MainAxisAlignment.center,

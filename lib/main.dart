@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       ),
 
 
-      home:  const  Info(),
+      home:  const SScreen2(),
       //home: const splash().
 
       debugShowCheckedModeBanner: false,
