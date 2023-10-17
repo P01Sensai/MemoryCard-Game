@@ -39,6 +39,18 @@ class InfoState extends State<Info> {
             children: [
               Container(
                 padding: const EdgeInsets.all(20),
+                //margin: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  border:  Border.all(width: 2, color: Colors.yellowAccent),
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.black
+                ),
+                child: const Text(
+                  'MINOR PROJECT MEMBERS', style:  TextStyle( fontSize: 20, fontWeight: FontWeight.bold, color:  Colors.white),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(20),
                 margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),

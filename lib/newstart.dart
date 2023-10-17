@@ -200,7 +200,7 @@ class _startState extends State<newstart> {
                     onPressed: () {
                       // Handle back button press
                       Navigator.of(context).pop();
-                      appInfo();
+                      closeAppUsingExit();
 
                     },
                     child: const Icon(Icons.arrow_back),
@@ -212,13 +212,14 @@ class _startState extends State<newstart> {
                 alignment: Alignment.bottomLeft,
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
-                  child: ElevatedButton(
+                  child: FloatingActionButton(
                     onPressed: () {
                       // Handle back button press
                       Navigator.of(context).pop();
-                      closeAppUsingExit();
+                      appInfo();
                     },
                     child: const Icon(Icons.info),
+                    backgroundColor: Colors.amber,
                   ),
                 ),
               ),
