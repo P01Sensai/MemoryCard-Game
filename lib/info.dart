@@ -6,6 +6,8 @@ class Info extends StatefulWidget {
   @override
   InfoState createState() => InfoState();
 }
+
+
 class InfoState extends State<Info> {
   bool selected = false;
 
@@ -38,10 +40,17 @@ class InfoState extends State<Info> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
                 decoration: BoxDecoration(
-                    border: Border.all(width: 2, color: Colors.yellowAccent),
+                    //border: Border.all(width: 2, color: Colors.yellowAccent),
                     borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.white.withOpacity(0.3),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
                     color: Colors.black),
                 child: const Text(
                   'MINOR PROJECT MEMBERS',
@@ -52,6 +61,7 @@ class InfoState extends State<Info> {
                   ),
                 ),
               ),
+              SizedBox(height: 20,),
               GestureDetector(
                 onTap: () {
                   setState(() {
@@ -59,27 +69,45 @@ class InfoState extends State<Info> {
                   });
                 },
                 child: AnimatedContainer(
-                  // decoration: BoxDecoration(
-                  //     border: Border.all(width: 2, color: Colors.yellowAccent),
-                  //     borderRadius: BorderRadius.circular(10),
-                  //     ),
                   width: selected ? 300.0 : 300.0,
                   height: selected ? 300.0 : 300.0,
                   decoration: BoxDecoration(
-                    color: selected ? Colors.amberAccent : Colors.blue,
-                    //border: Border.all(width: 2, color: Colors.black),
-                    borderRadius: BorderRadius.circular(15.0), // Set the border radius here
+                    gradient: const LinearGradient(
+                      colors: [
+                        Colors.blue,
+                        Colors.amberAccent,
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(15.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.white.withOpacity(0.3),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
                   ),
-                  alignment:
-                  selected ? Alignment.center : AlignmentDirectional.center,
-                  duration: const Duration(seconds: 2),
-                  curve: Curves.fastOutSlowIn,
-                  child: const Text(
-                    '1). Pramanshu Prajapati\n2). Aditya Bhardwaj\n3). Harsh Srivastava\n4). Abhay Sharma ',
-                    style: TextStyle(
-                      fontSize: 20,
+                  alignment: Alignment.center,
+                  duration: const Duration(seconds: 1),
+                  curve: Curves.easeInOut,
+                  child: AnimatedDefaultTextStyle(
+                    style: selected
+                        ? const TextStyle(
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
+                    )
+                        : TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.black.withOpacity(0.7),
+                    ),
+                    duration: const Duration(seconds: 1),
+                    curve: Curves.fastOutSlowIn,
+                    child: const Text(
+                      '1). Pramanshu Prajapati\n2). Aditya Bhardwaj\n3). Harsh Srivastava\n4). Abhay Sharma ',
                     ),
                   ),
                 ),
