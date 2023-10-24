@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'newstart.dart';
+
 class Info extends StatefulWidget {
   const Info({Key? key}) : super(key: key);
 
@@ -42,26 +44,27 @@ class InfoState extends State<Info> {
               Container(
                 padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
                 decoration: BoxDecoration(
-                    //border: Border.all(width: 2, color: Colors.yellowAccent),
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.white.withOpacity(0.3),
-                        blurRadius: 10,
-                        offset: const Offset(0, 4),
-                      ),
-                    ],
-                    color: Colors.black),
+                  border: Border.all(width: 1, color: Colors.yellowAccent),
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.white.withOpacity(0.3),
+                      blurRadius: 10,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                  color: Colors.black,
+                ),
                 child: const Text(
                   'MINOR PROJECT MEMBERS',
                   style: TextStyle(
-                    fontSize: 19,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20),
               GestureDetector(
                 onTap: () {
                   setState(() {
@@ -123,6 +126,21 @@ class InfoState extends State<Info> {
                 child: const FlutterLogo(size: 25),
               ),
             ],
+          ),
+        ),
+      ),
+      floatingActionButton: Align(
+        alignment: Alignment.bottomRight,
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: FloatingActionButton(
+            onPressed: () {
+              // Handle back button press
+              Navigator.of(context).pop();
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const newstart()));
+            },
+            backgroundColor: Colors.amberAccent,
+            child: const Icon(Icons.arrow_back),
           ),
         ),
       ),
