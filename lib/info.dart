@@ -20,10 +20,9 @@ class InfoState extends State<Info> {
         title: Container(
           width: 50,
           height: 50,
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
+          child: ClipOval(
+            child: Image.asset('assets/Screenshot 2023-09-21 114811.jpg', fit: BoxFit.cover),
           ),
-          child: Image.asset('assets/Screenshot 2023-09-21 114811.jpg'),
         ),
         centerTitle: true,
         backgroundColor: Colors.black,

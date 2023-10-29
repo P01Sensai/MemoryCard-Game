@@ -29,20 +29,13 @@ class _startState extends State<newstart> {
 
       appBar: AppBar(
         title: Container(
-          width: 50, // Specify the width as needed
-          height: 50, // Specify the height as needed
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-
+          width: 50,
+          height: 50,
+          child: ClipOval(
+            child: Image.asset('assets/Screenshot 2023-09-21 114811.jpg', fit: BoxFit.cover),
           ),
-
-          child: Image.asset('assets/Screenshot 2023-09-21 114811.jpg'),
         ),
         centerTitle: true,
-        // title: const Center(child: Text('MemoryCard Game',style: TextStyle(
-        //   fontSize: 20,
-        //   fontWeight: FontWeight.bold,
-        //   color: Colors.amber),)),
         backgroundColor: Colors.black,
         elevation: 10,
       ),
