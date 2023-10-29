@@ -98,6 +98,10 @@ class _startState extends State<newstart> {
             margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
             //color: Colors.blue,
             decoration: BoxDecoration(
+                image: const DecorationImage(
+                  image: AssetImage('assets/alexander-grey-62vi3TG5EDg-unsplash.jpg'),
+                  fit: BoxFit.cover,
+                ),
               border: Border.all(width: 1,color: Colors.white),
               borderRadius: const BorderRadius.all( Radius.circular(10)) ,
               color: Colors.black,
@@ -113,6 +117,7 @@ class _startState extends State<newstart> {
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+
                 children: [
                   ElevatedButton(
                     onPressed: () {
@@ -152,7 +157,6 @@ class _startState extends State<newstart> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-
                   ElevatedButton(onPressed: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>const MemoryCardGameLevel1()));
